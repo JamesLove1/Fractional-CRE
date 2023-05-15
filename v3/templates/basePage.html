@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/styles/style.css" />
+    <link rel="icon" href="../static/images/favicon/favricon.png">
+    <script src="../static/scripts/scripts.js" defer></script>
+    <title>Fractional CRE {%block title%} {% endblock %}</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="flex header">
+            <h1><a href="{{url_for('index')}}">Fractional CRE</a></h1>
+            <nav>
+                <ul class="flex">
+                    <li><a href="{{url_for('investments')}}">Investments</a></li> 
+                    <li><a href="{{url_for('researchInsights')}}">Research & Insights</a></li>
+                    <li><a href="{{url_for('aboutUs')}}">About Us</a></li> 
+                    <li><a href="{{url_for('login')}}">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    {% block content%} {% endblock %}
+    
+    <footer class="flex links">
+        <h1><a href="{{url_for('index')}}">Fractional CRE</a></h1>
+        <nav>
+            <ul class="flex">
+                <li><a href="{{url_for('investments')}}">Investments</a></li>
+                <li><a href="{{url_for('researchInsights')}}">Research & Insights</a></li>
+                <li><a href="{{url_for('aboutUs')}}">About Us</a></li>
+                <li><a href="{{url_for('login')}}">Login</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

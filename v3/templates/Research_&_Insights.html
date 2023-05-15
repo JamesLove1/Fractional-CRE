@@ -1,0 +1,33 @@
+{% extends "basePage.html"%}
+
+{% block title %} | Research & Insights {% endblock %}
+
+{% block content %}
+
+    <main>
+
+        <div class="flex center">
+            <h1>Research & Insights</h1>
+        </div>
+
+        <div class="flex articles">
+            <div class="flex randi">
+                <a href="{{url_for('REITs_Vs_Frational')}}">    
+                    <h2>REITS Vs Fractional Ownership</h2>
+                    <img src="{{url_for('static',filename='images/stocks.jpg')}}" class="hero_og" alt="">
+                </a>
+            </div>
+
+            <div class="flex randi">
+                <a href="{{url_for('RE_Vs_CRE')}}">
+                    <h2>Residiential Property Vs Commercial Real Estate</h2>
+                    <img src="{{url_for('static',filename='images/Residential.jpg')}}" class="hero_og" alt="">
+                </a>
+            </div>
+        </div>
+
+
+        <img src="{{url_for('static',filename='images/building3.jpg')}}" alt="" class="hero_og">
+    </main>
+
+{% endblock %}

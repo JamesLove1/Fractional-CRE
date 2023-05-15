@@ -1,0 +1,56 @@
+{% extends "basePage.html"%}
+
+{% block title %} | Home {% endblock %}
+
+{% block content %}
+    <main>
+        <div class="flex hero">
+
+            <a href="{{url_for('investments')}}">
+                <button class="btn_investments">Invest Now</button> <!-- come back and fix this> -->
+            </a>
+        </div>
+        
+        <!-- <img src="./images/building1.jpg" class="hero" alt="Hero-CRE-Building">
+        <img src="./images/building4.jpg" alt="" class="hero"> -->
+
+
+        <div class="flex">
+            <h1>Investment Process</h1>
+        </div>
+
+        <div class="flex">
+            <h2>1. Find Asset on Our Platform</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea voluptates nesciunt dicta in, aliquid voluptatem, eveniet culpa inventore perferendis consectetur sunt assumenda! Nihil molestiae adipisci dicta in quas eius tempore.
+            </p>
+        </div>
+
+        <div class="flex">
+            <h2>2. Invest</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea voluptates nesciunt dicta in,aliquid voluptatem, eveniet culpa inventore perferendis consectetur sunt assumenda! Nihil molestiae adipisci dicta in quas eius tempore.
+            </p>
+        </div>
+
+        <div class="flex">
+            <h2>3. Recive Cash Flow from Assets</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea voluptates nesciunt dicta in, aliquid voluptatem, eveniet culpa inventore perferendis consectetur sunt assumenda! Nihil molestiae adipisci dicta in quas eius tempore.
+            </p>
+        </div>
+
+        <div class="flex">
+            <h2>4. Sell Asset</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea voluptates nesciunt dicta in, aliquid voluptatem, eveniet culpa inventore perferendis consectetur sunt assumenda! Nihil molestiae adipisci dicta in quas eius tempore.
+            </p>
+        </div>
+
+        <div class="flex">
+            <p id="homepage_a"><a href="{{url_for('REITs_Vs_Frational')}}">
+                REITS Vs Fractional Ownership
+            </p></a>
+            <p id="homepage_a"><a href="{{url_for('RE_Vs_CRE')}}">
+                Residential Property Vs Commercial Real Estate
+            </a></p>
+        </div>
+              
+    </main>
+{% endblock %}

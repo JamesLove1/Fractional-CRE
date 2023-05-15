@@ -1,0 +1,27 @@
+{% extends "basePage.html"%}
+
+{% block title %} | About Us{% endblock %}
+
+{% block content %}
+
+    <main>
+        <div class="flex center">
+            <h1>About Us</h1>
+        </div>
+
+        <div class="flex" id="map">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9931.6016059284!2d-0.10203984574567711!3d51.51504322418154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487603554edf855f%3A0xa1185c8d19184c0!2sCity%20of%20London%2C%20London!5e0!3m2!1sen!2suk!4v1680620341350!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam mollitia, sequi eius quia ea inventore velit alias
+            aut, molestias repudiandae nesciunt saepe reprehenderit labore, minus et assumenda. Debitis, eaque? Maxime?</p>
+            
+        </div>
+
+        <div class="flex">
+            <img src="{{url_for('static',filename='/images/London.jpg')}}" alt="" class="hero_og">
+        </div>
+       
+    </main>
+
+{% endblock %}

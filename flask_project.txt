@@ -1,0 +1,61 @@
+Read the following article to assist with setting up the virtual environment
+and installing Flask to your python file.
+
+https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3
+
+
+Once you have installed and set up the virtual environment, you will need to create a folder called "templates" (lowercase)
+You will also need to create a folder called "static" and inside create 2 more folders "js" and "css"(all lowercase)
+
+The templates folder will contain the HTML files you will need for the different routes you will build in python.
+To display the relevant sheet, you will end up using "render" from Flask, this will direct your app to the HTML page to load
+
+In regards to HTML files you will start with a "base.html" file and for all other pages the first line of code needed
+will be {{% extends base.html %}}. This odd looking syntax is called templating and is avaliable via Flask, which has
+a templating language intergrated into it called Jinja.
+
+A link to the Jinja docs is here:
+https://jinja.palletsprojects.com/en/3.1.x/
+
+
+A link to the Flask docs is here:
+https://flask.palletsprojects.com/en/2.2.x/
+
+
+The templates will allow you to use python methods inside of the HTML files.
+
+A basic structure for using templates will be the block and endblock e.g.
+{{% block css % }}
+    links containing css in here - these are both internal and external css files
+{{% endblock %}}
+
+The above would typically be found on the base.html page. 
+
+
+We would also have the same structure for the main content e.g.:
+{{% block content %}}
+    all page content will appear between these template tags
+{{% endblock %}}
+
+The content tags would contain the content for the landing page on the base.html page, but in other pages
+where we start with our {{% extends base.html %}} line we will write the content relevant for that page.
+
+By rewriting the content template tags on these pages we can "re-route" the content that was previously found 
+on the base.html page and displays content for the new page (endpoint).
+
+e.g. The page below would display a basic registration page containing a form:
+
+{{% extends base.html %}}
+{{% block content %}}
+
+    <div>
+        <form>
+            <label for="fname">Forename</label>
+            <input type="text" id="fname" name="fname>
+            <label for="sname">Surname</label>
+            <input type="text" id="sname" name=sfname>
+        </form>
+    </div>
+
+{{% endblock %}}
+

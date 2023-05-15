@@ -1,0 +1,91 @@
+{% extends "basePage.html"%}
+
+{% block title %} | Property {% endblock %}
+
+{% block content %}
+<main>
+    <div class="flex center">
+        <h1 class="subtitle1">The Shard</h1>
+
+    </div>
+
+    <div class="flex center">
+        <h3 class="subtitle2">WC1 1BC</h3>
+    </div>
+
+
+
+    <div class="flex asset_investments">
+        <div class="asset_show_box">
+            <div class="asset">
+                <img class="items" src="{{url_for('static',filename='images/test/test.jpg')}}" alt="">
+                <img class="items" src="{{url_for('static',filename='images/test/test1.jpg')}}" alt="">
+                <img class="items" src="{{url_for('static',filename='images/test/test2.jpg')}}" alt="">
+                <div class="arrow_right" id="carasole_right">&#10095;</div>
+                <div class="arrow_left" id="carasole_left">&#10094;</div>
+            </div>
+
+            <h3 id="overlay">London - Office</h3>
+
+            <div class="flex summary">
+
+                <div class="flex">
+                    <h3>GBP 5000</h3>
+                </div>
+                <div class="flex">
+                    <h3>Yeild 4%</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="purchase">
+            <div class="flex">
+                <input type="text" name="" id="" placeholder="e.g. 100 GBP">
+            </div>
+
+            <div class="flex center">
+                <button id="buy">Buy</button>
+                <button id="sell">Sell</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="flex articles article">
+        <!-- <img src="./images/stocks.jpg" alt=""> -->
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste corrupti voluptatum ipsa? Libero earum dolor
+            commodi dolorum, sed soluta molestias molestiae tempora. Molestiae ab aut accusantium, numquam
+            necessitatibus
+            voluptatibus error!</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste corrupti voluptatum ipsa? Libero earum dolor
+            commodi dolorum, sed soluta molestias molestiae tempora. Molestiae ab aut accusantium, numquam
+            necessitatibus
+            voluptatibus error!</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste corrupti voluptatum ipsa? Libero earum dolor
+            commodi dolorum, sed soluta molestias molestiae tempora. Molestiae ab aut accusantium, numquam
+            necessitatibus
+            voluptatibus error!</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste corrupti voluptatum ipsa? Libero earum dolor
+            commodi dolorum, sed soluta molestias molestiae tempora. Molestiae ab aut accusantium, numquam
+            necessitatibus
+            voluptatibus error!</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste corrupti voluptatum ipsa? Libero earum dolor
+            commodi dolorum, sed soluta molestias molestiae tempora. Molestiae ab aut accusantium, numquam
+            necessitatibus
+            voluptatibus error!</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste corrupti voluptatum ipsa? Libero earum dolor
+            commodi dolorum, sed soluta molestias molestiae tempora. Molestiae ab aut accusantium, numquam
+            necessitatibus
+            voluptatibus error!</p>
+    </div>
+</main>
+{% endblock %}

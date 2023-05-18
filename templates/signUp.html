@@ -13,17 +13,17 @@
                     <h1>Sign Up</h1>
                 </div>
                 
-                <form action="{{ url_for('login') }}" method="post" class="login-form">
+                <form action="{{ url_for('signUp') }}" method="post" class="login-form">
                     <div class="flex">
                         <input type="textbox" id="Username" placeholder="Username" name="Username" value="{{Username}}">
                     </div>
 
                     <div class="flex">
-                        <input type="textbox" id="EmailAddress" placeholder="EmailAddress" name="EmailAddress" value="{{Password}}">
+                        <input type="email" id="EmailAddress" placeholder="EmailAddress" name="EmailAddress" value="{{EmailAddress}}">
                     </div>
 
                     <div class="flex">
-                        <input type="textbox" id="Password" placeholder="Password" name="Password" value="{{Password}}">
+                        <input type="password" id="Password" placeholder="Password" name="Password" value="{{Password}}">
                     </div>
 
                     <div class="flex" id="submit_flex">

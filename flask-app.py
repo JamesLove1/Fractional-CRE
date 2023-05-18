@@ -53,9 +53,9 @@ def forgotPassword():
         db(f"update users set password = '{updatedPassword}' where emailAddress='{email}';")
     return render_template("forgotPassword.html")
 
-@app.route("/Investments")
-def Investments():
-    return render_template("Investments.html")
+@app.route("/investments")
+def investments():
+    return render_template("investments.html")
 
 @app.route("/aboutUs")
 def aboutUs():

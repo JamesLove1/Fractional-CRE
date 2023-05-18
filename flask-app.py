@@ -67,7 +67,7 @@ def RE_Vs_CRE():
 
 @app.route("/property")
 def property():
-    return render_template("property.html")
+    return render_template("Property.html")
 
 
 @app.route("/REITs_Vs_Frational")

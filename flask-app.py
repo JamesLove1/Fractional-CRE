@@ -55,7 +55,7 @@ def forgotPassword():
 
 @app.route("/investments")
 def investments():
-    return render_template("investments.html")
+    return render_template("Investments.html")
 
 @app.route("/investmetns1")
 def investments1():

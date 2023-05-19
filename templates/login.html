@@ -4,42 +4,38 @@
 
 {% block content%}
 
-    <main> 
-        <div class="flex login-form">
+<main>
+    <div class="flex login-form">
 
-            <div id="login-1">
+        <div class="flex" id="login-1">
 
-                <div class="flex">
-                    <h1>Login</h1>
-                </div>
-                
-                <form action="{{ url_for('login') }}" method="post" class="login-form">
-
-                    <div class="flex">
-                        <input type="textbox" id="Username" placeholder="Username" name="Username" value="{{Username}}">
-                    </div>
-
-                    <div class="flex">
-                        <input type="password" id="Password" placeholder="Password" name="Password" value="">
-                    </div>
-                    
-                    <div class="flex" id="submit_flex">
-                        <input type="submit" id="submit" value="Sign In">
-                    </div>
-                
-                </form> 
-
-                <div class="flex">
-                    <a href="{{url_for('signUp')}}">Sign up</a>
-                    <p></p>
-                    <a href="{{url_for('forgotPassword')}}">Forgotten Password</a>
-                </div>
+            <div class="flex">
+                <h1>Login</h1>
             </div>
 
-            <div class="flex" id="login-2">
-                <img src="../static/images/building2.jpg" alt="" class="hero_og">
+            <form action="{{ url_for('login') }}" method="post" class="login-form">
+                <div class="flex">
+                    <input type="textbox" id="Username" placeholder="Username" name="Username" value="{{Username}}">
+                </div>
+                <div class="flex">
+                    <input type="textbox" id="Password" placeholder="Password" name="Password" value="{{Password}}">
+                </div>
+                <div class="flex" id="submit_flex">
+                    <input type="submit" id="submit" value="Sign In">
+                </div>
+            </form>
+
+            <div class="flex">
+                <a href="{{url_for('signUp')}}">Sign up</a>
+                <p></p>
+                <a href="{{url_for('forgotPassword')}}">Forgotten Password</a>
             </div>
         </div>
-    </main>
 
- {% endblock%}
+        <div class="flex" id="login-2">
+            <img src="../static/images/building2.jpg" alt="" class="hero_og">
+        </div>
+    </div>
+</main>
+
+{% endblock%}

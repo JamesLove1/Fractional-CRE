@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/style.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/mobile.css')}}" />
+
     <link rel="icon" href="{{url_for('static', filename='images/favicon/favricon.png')}}">
     <script src="{{url_for('static', filename='scripts/scripts.js')}}" defer></script>
     <script src="{{url_for('static', filename='scripts/scripts_V2_crasols.js')}}" defer></script>
@@ -17,6 +19,7 @@
     <header>
         <div class="flex header">
             <h1><a href="{{url_for('index')}}">Fractional CRE</a></h1>
+            <i class="fa-solid fa-bars" id="menue" onclick="menue_main()" style="color: #ffffff;"></i>
             <nav>
                 <ul class="flex">
                     <li><a href="{{url_for('investments')}}">Investments</a></li> 
@@ -41,7 +44,7 @@
             </ul>
         </nav>
     </footer>
-
+    <script src="https://kit.fontawesome.com/83827f3d1e.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

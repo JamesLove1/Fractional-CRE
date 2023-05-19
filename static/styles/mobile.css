@@ -1,0 +1,140 @@
+
+
+
+@media (max-width: 430px) {
+
+    .header,
+    footer {
+        /* justify-content: center; */
+    }
+
+    nav li {
+        width: 100%;
+    }
+
+    footer h1{
+        margin: .5em;
+    }
+
+    footer ul,
+    header ul {
+        margin: 0;
+    }
+
+    header li {
+        /* margin: 0.5em; */
+    }
+
+    header h1 {
+        margin: 5%;
+        margin-right: 0%;
+    }
+
+    h1 a:hover {
+        font-size: 105%;
+    }
+
+    #menue {
+        display: block;
+        margin: 2%;
+        
+        font-size: 2em;
+        border: 5px solid white;
+        padding: 2%;
+        border-radius: 20%;
+    }
+
+    h1 a {
+        margin-left: 0em;
+    }
+
+    header nav{
+        display: none;
+    }
+
+    .btn_investments {
+        color: #000000;
+        background-color: #FFFFFF;
+        border: 5px double #000000;
+        border-radius: 0;
+        font-size: larger;
+        /* margin: 40%; */
+        margin: 21vh;
+    }
+
+    .article {
+        width: 95%;
+        /* margin:  1em ; */
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #000000;
+        color: #FFFFFF;
+    }
+
+    main h1 {
+        background-color: #000000;
+        color: white;
+        display: inline;
+        margin: .3em;
+        padding: .2em;
+    }
+
+    #login-1 {
+        width: 100%;
+        justify-content: center;
+        /* margin-top: 0%;
+        margin-bottom: 0%; */
+        margin: 10em;
+
+    }
+
+    #login-2 {
+        display: none;
+        /* width: 70%; */
+    }
+
+    form {
+        margin: 0;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    input {
+        width: 300px;
+        height: 30px;
+        margin: .5em;
+    }
+
+    #submit {
+        background-color: black;
+        color: #FFFFFF;
+        font-size: 1em;
+        padding: 1.5em;
+    }
+
+    #submit_flex {
+        justify-content: center;
+    }
+
+    .center {
+        justify-content: center;
+    }
+
+    .asset {
+        position: relative;
+        width: 300px;
+        height: 200px;
+    }
+
+    .asset .arrow_right {
+        position: absolute;
+        top: 40%;
+        left: 95%;
+        z-index: 10;
+        font-size: xx-large;
+        background-color: #000000;
+        /* background-color: red; */
+        color: #FFFFFF;
+    }
+}

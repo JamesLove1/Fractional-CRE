@@ -1,8 +1,11 @@
-from flask import Flask, render_template, request, flash, redirect, url_for
+from flask import Flask, render_template, request, flash, redirect, url_for, jsonify
+from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
 import sqlite3
 
 app = Flask(__name__)
 
+app.config["JWT_SECRET_KEY"] = "your_secret_key"
+jwt = JWTManager(app)
 
 def db(sqlQuiry): #sqlQuiry
     db = sqlite3.connect("database/flask.db")
@@ -24,6 +27,24 @@ def index():
 def portfolio():
     return render_template("portfolio.html")
 
+@app.route("/token", methods=["POST"])
+def token():
+       
+    username = request.form['Username']
+    password = request.form['Password']
+    
+    if username != "test" or password != "test":
+        return jsonify({"msg": "Bad username or password"}), 401
+    
+    access_token = create_access_token(identity=username)
+    return jsonify(access_token=access_token)
+       
+@app.route("/protected", methods=["GET"])
+@jwt_required()
+def protected():
+    current_user = get_jwt_identity()
+    return jsonify(logged_in_as = current_user),200
+  
 @app.route("/login", methods=["GET","POST"])
 def login():
     Username = ""

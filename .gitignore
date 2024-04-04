@@ -1,2 +1,3 @@
 script.py
 .vscode/
+__pycache__/

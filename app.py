@@ -30,8 +30,11 @@ def portfolio():
 @app.route("/token", methods=["POST"])
 def token():
        
-    username = request.form['Username']
-    password = request.form['Password']
+    # username = request.form['Username']
+    # password = request.form['Password']
+    
+    username = request.json.get('username', None)
+    password = request.json.get('password', None)
     
     if username != "test" or password != "test":
         return jsonify({"msg": "Bad username or password"}), 401
@@ -43,7 +46,8 @@ def token():
 @jwt_required()
 def protected():
     current_user = get_jwt_identity()
-    return jsonify(logged_in_as = current_user),200
+    return render_template("portfolio.html",logged_in_as = current_user)
+    # return jsonify(logged_in_as = current_user),200
   
 @app.route("/login", methods=["GET","POST"])
 def login():
@@ -109,3 +113,7 @@ def creatAccount():
 @app.route("/helloWorld1")
 def hello_world():
     return "<p>Hello, World!</p>"
+
+@app.route("/404")
+def error():
+    return "<h1>ERROR(UserError) - 404</h1>"
